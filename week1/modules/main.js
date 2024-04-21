@@ -1,4 +1,4 @@
-import U, { printName as printUserName, printAge} from 'user.js'
+import U, { printName as printUserName, printAge} from '/user.js'
 
 const user = new U('Bob', 11)
 console.log(user)
