@@ -3,6 +3,11 @@ export default class User {
         this.name = name;
         this.age = age;
     }
+
+
+toString() {
+    return `User { name: ${this.name}, age: ${this.age} }`;
+}
 }
 
 export function printName(user) {
