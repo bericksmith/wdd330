@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Modules</title>
-    <script type="module" src="main.js"></script>
 </head>
 <body>
-    
+    <h1>User Information</h1>
+    <pre id="console-output"></pre>
+
+    <script type="module">
+        const originalConsoleLog = console.log;
+        console.log = function (...args) {
+            originalConsoleLog(...args);
+            const output = document.getElementById('console-output');
+            output.textContent += args.join(' ') + '\n';
+        };
+
+        import('./main.js').catch(error => {
+            console.error('Error loading the module: ', error);
+            document.getElementById('console-output').textContent += 'Failed to load the script: ' + error.message;
+        });
+    </script>  
 </body>
 </html>
