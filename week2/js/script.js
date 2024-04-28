@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
         prophetCard.querySelector("h2").textContent = `${prophet.name} ${prophet.lastname}`;
         prophetCard.querySelector("p:nth-of-type(1)").textContent = `Birth Date: ${prophet.birthdate}`;
         prophetCard.querySelector("p:nth-of-type(2)").textContent = `Birth Place: ${prophet.birthplace}`;
-        prophetCard.querySelector(".photo").src = prophet.imageurl;
-        prophetCard.querySelector(".photo").alt = `${prophet.name} ${prophet.lastname}`;
+        prophetCard.querySelector(".profile").src = prophet.imageurl;
+        prophetCard.querySelector(".profile").alt = `${prophet.name} ${prophet.lastname}`;
         prophetCardsContainer.appendChild(prophetCard);
       });
     })
