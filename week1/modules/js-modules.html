@@ -22,44 +22,6 @@
             document.getElementById('console-output').textContent += 'Failed to load the script: ' + error.message;
         });
     </script> 
-    
-    <hr>
-
-    <h2>User.js Code:</h2>
-    <pre>
-        export default class User {
-            constructor(name, age) {
-                this.name = name;
-                this.age = age;
-            }
-        
-        
-        toString() {
-            return `User { name: ${this.name}, age: ${this.age} }`;
-        }
-        }
-        
-        export function printName(user) {
-            console.log(`User's name is ${user.name}`);
-        }
-        
-        export function printAge(user) {
-            console.log(`User is ${user.age} years old`);
-        }
-    </pre>
-
-    <hr>
-
-    <h2>Main.js Code:</h2>
-    <pre>
-        import U, { printName as printUserName, printAge } from './user.js';
-
-        const user = new U('Bob', 11);
-        console.log(user);
-        printUserName(user);
-        printAge(user);
-    </pre>
-
 
 </body>
 </html>
