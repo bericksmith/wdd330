@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
       a: 0,
       b: 0,
       read() {
-          let firstNum = prompt('Enter the first number (a):', 0);
-          let secondNum = prompt('Enter the second number (b):', 0);
+          let firstNum = prompt('Enter a number:', 0);
+          let secondNum = prompt('Enter a second number:', 0);
           this.a = firstNum ? parseFloat(firstNum) : 0;
           this.b = secondNum ? parseFloat(secondNum) : 0;
       },
@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function runCalculator() {
       calculator.read();
-      alert(`Addition: ${calculator.sum()}<br> 
-      Subtraction: ${calculator.sub()} <br>
-      Multiplication: ${calculator.mul()}<br> 
+      alert(`Addition: ${calculator.sum()}
+      Subtraction: ${calculator.sub()}
+      Multiplication: ${calculator.mul()} 
       Division: ${calculator.div()}`);
   };
 
