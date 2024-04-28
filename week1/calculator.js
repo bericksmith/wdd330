@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function runCalculator() {
       calculator.read();
-      alert(`Sum: ${calculator.sum()} 
-      Subtraction: ${calculator.sub()} 
-      Multiplication: ${calculator.mul()} 
+      alert(`Addition: ${calculator.sum()}<br> 
+      Subtraction: ${calculator.sub()} <br>
+      Multiplication: ${calculator.mul()}<br> 
       Division: ${calculator.div()}`);
   };
 
