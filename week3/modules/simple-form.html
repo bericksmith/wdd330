@@ -1,0 +1,32 @@
+<title>Simple Form Submission</title>
+</head>
+<body>
+<form id="formElem">
+  <input type="text" name="name" value="John">
+  <input type="text" name="surname" value="Smith">
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("formElem");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      // Create FormData object from the form
+      const formData = new FormData(form);
+
+      // Append the current date to the FormData
+      const currentDate = new Date().toISOString().slice(0, 10); // YYYY-MM-DD format
+      formData.append("date", currentDate);
+
+      // Output the FormData to the console
+      console.log("Form Data:");
+      for (let [key, value] of formData.entries()) {
+        console.log(`${key}: ${value}`);
+      }
+    });
+  });
+</script>
+</body>
+</html>
