@@ -2,7 +2,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 500px;
     margin: 0;
   }
 
@@ -13,21 +13,22 @@ body {
 }
 
 .box {
+  font-size: 26px;
+  font-family: verdana;
+	text-align:center;
 	margin: 0;
-	border: 1px solid rgba(0, 0, 0, 0.2);
+	border: 5px solid rgba(0, 0, 0, 0.2);
 	padding: 0.5rem;
 	width: 175px;
 	height: 175px;
-	border-radius: 95px;
+	border-radius: 100px;
 	background-color: rgb(229, 255, 0);
-	font-size: larger;
-	text-align:center;
-	animation: boxfloat 10s infinite;
+	animation: boxfloat 12s infinite;
 }
 
 @keyframes boxfloat {
 	0% {
-		transform: translateY(0);
+		transform: translateY(0px);
 		background-color: rgb(204, 217, 148);
 	}
 	20% {
@@ -45,12 +46,12 @@ body {
 		color: #fff;
 	}
 	80% {
-		transform: translateX(0px) translateY(200px);
+		transform: translateX(0px) translateY(300px);
 		background-color: rgb(108, 255, 118);
 	}
 	100% {
-		transform: translateY(0);
+		transform: translateY(0px);
 		background-color: rgb(0, 255, 34);
-		rotate: 50%;
 	}
 }
+
