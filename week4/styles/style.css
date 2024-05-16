@@ -13,9 +13,10 @@ body {
 	padding: 0.5rem;
 	width: 175px;
 	height: 175px;
-	border-radius: 85px;
+	border-radius: 95px;
 	background-color: rgb(229, 255, 0);
 	font-size: larger;
+	text-align: center;
 	animation: boxfloat 10s infinite;
 }
 
