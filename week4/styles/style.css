@@ -26,21 +26,21 @@ body {
 		background-color: rgb(204, 217, 148);
 	}
 	20% {
-		transform: translateX(-100px) translateY(0px);
+		transform: translateX(0px) translateY(-100px);
 		background-color: rgb(221, 201, 85);
 	}
 	40% {
-		transform: translateX(200px) translateY(0px);
+		transform: translateX(0px) translateY(200px);
 		background-color: rgb(170, 59, 34);
 		color: #fff;
 	}
 	60% {
-		transform: translateX(-200px) translateY(0px);
+		transform: translateX(0px) translateY(-200px);
 		background-color: rgb(85, 17, 17);
 		color: #fff;
 	}
 	80% {
-		transform: translateX(200px) translateY(0px);
+		transform: translateX(0px) translateY(200px);
 		background-color: rgb(108, 255, 118);
 	}
 	100% {
