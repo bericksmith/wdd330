@@ -6,6 +6,11 @@ body {
     margin: 0;
   }
 
+  .container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 .box {
 	margin: 0;
@@ -17,7 +22,6 @@ body {
 	background-color: rgb(229, 255, 0);
 	font-size: larger;
 	text-align:center;
-	vertical-align: middle;
 	animation: boxfloat 10s infinite;
 }
 
