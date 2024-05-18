@@ -21,7 +21,8 @@ section {
     background: #f4f4f4;
     padding: 10px 20px;
     border-radius: 5px;
-    width: auto;
+    min-width: 0;
+    white-space: nowrap;
 }
 
 nav {
