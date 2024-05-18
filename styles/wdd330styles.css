@@ -17,6 +17,13 @@ section {
     border-bottom: 1px solid #ccc;
 }
 
+.weeklyContainer {
+    background: #f4f4f4;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
 nav {
     background-color: #f4f4f4;
     padding: 10px 0;
