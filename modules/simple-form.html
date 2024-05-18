@@ -1,34 +1,43 @@
-<title>Simple Form Submission</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Form Submission</title>
 </head>
 <body>
-<form id="formElem">
-<p>First: <input type="text" id="name" name="name" autocomplete="off" autocapitalize="on" value="John"></p>
-<p>Last: <input type="text" id="surname" name="surname" autocomplete="off" autocapitalize="on" value="Smith"></p>
-<p>Email: <input type="email" id="email" name="email" value="you@gmail.com"></p>
-<p>Password: <input type="password" id="pass" name="pass" required autocomplete="off"></p>
-<p><input type="submit" value="Submit"></p>
-</form>
+    <form id="formElem">
+        <p>First: <input type="text" id="name" name="name" autocomplete="off" autocapitalize="on" value="John"></p>
+        <p>Last: <input type="text" id="surname" name="surname" autocomplete="off" autocapitalize="on" value="Smith"></p>
+        <p>Email: <input type="email" id="email" name="email" value="you@gmail.com"></p>
+        <p>Password: <input type="password" id="pass" name="pass" required autocomplete="off"></p>
+        <p><input type="submit" value="Submit"></p>
+    </form>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("formElem");
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
+    <div id="displayData"></div>
 
-      // Create FormData object from the form
-      const formData = new FormData(form);
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("formElem");
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
 
-      // Append the current date to the FormData
-      const currentDate = new Date().toISOString().slice(0, 10); // YYYY-MM-DD format
-      formData.append("date", currentDate);
+                const formData = new FormData(form);
+                
+                const displayData = document.getElementById('displayData');
+                displayData.innerHTML = '<h3>Submitted Data:</h3>';
 
-      // Output the FormData to the console
-      console.log("Form Data:");
-      for (let [key, value] of formData.entries()) {
-        console.log(`${key}: ${value}`);
-      }
-    });
-  });
-</script>
+                for (let [key, value] of formData.entries()) {
+                    const paragraph = document.createElement('p');
+                    paragraph.textContent = `${key}: ${value}`;
+                    displayData.appendChild(paragraph);
+                }
+
+                const currentDate = new Date().toISOString().slice(0, 10); // YYYY-MM-DD format
+                const datePara = document.createElement('p');
+                datePara.textContent = `Date: ${currentDate}`;
+                displayData.appendChild(datePara);
+            });
+        });
+    </script>
 </body>
 </html>
