@@ -3,7 +3,7 @@ body {
     margin: 0 auto;
     max-width: 960px;
     border: 1px solid #333;
-    background-color: deepskyblue;
+    background-color: rgb(53, 53, 53);
 }
 
 header {
@@ -36,7 +36,7 @@ nav a:hover {
 }
 
 footer {
-    padding: 20px;
+    padding: 5px 20px;
     border-top: 1px solid #ccc;
     background-color: #bebebe;
 }
