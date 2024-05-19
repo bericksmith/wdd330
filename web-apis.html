@@ -46,9 +46,9 @@
 <body>
 
 <div id="container">
-    <h2>JavaScript Geolocation</h2>
+    <h2>My JavaScript Geolocation Demo</h2>
     <p>Click the button to get your coordinates.</p>
-    <button onclick="getLocation()">Try It</button>
+    <button onclick="getLocation()">Try It!</button>
     <p id="demo"></p>
 </div>
 
@@ -68,7 +68,7 @@ function showPosition(position) {
     const longitude = position.coords.longitude;
     x.innerHTML = "Latitude: " + latitude + 
         "<br>Longitude: " + longitude +
-        '<br><a href="https://www.google.com/maps/@' + latitude + ',' + longitude + ',15z" target="_blank">View on Google Maps</a>';
+        '<br><p><a href="https://www.google.com/maps/@' + latitude + ',' + longitude + ',15z" target="_blank">View on Google Maps</a></p>';
 }
 
 function showError(error) {
