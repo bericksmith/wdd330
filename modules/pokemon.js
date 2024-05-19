@@ -1,5 +1,9 @@
 let url = "https://pokeapi.co/api/v2/pokemon";
 
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -10,7 +14,7 @@ fetch(url)
                        </div>
                        <h3>List of Pokémon:</h3><ul>`;
         data.results.forEach(pokemon => {
-            content += `<li>${pokemon.name}</li>`;
+            content += `<li>${capitalizeFirstLetter(pokemon.name)}</li>`; // Using the helper function
         });
         content += "</ul>";
         document.getElementById('pokemonData').innerHTML = content;
