@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetch API Example - WDD330</title>
+    <title>Pokémon Catalog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Readable font */
+            background-color: white; /* Background color */
+            color: black; /* Text color */
+            padding: 20px;
+        }
+        header {
+            background-color: red; /* Pokémon red */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        .stats {
+            color: blue; /* Highlight color for stats */
+            font-size: 18px;
+        }
+        h3 {
+            color: black;
+        }
+        ul {
+            list-style-type: none; /* Removes bullet points */
+            padding: 0;
+        }
+        li {
+            background-color: yellow; /* Pokémon yellow */
+            padding: 5px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .error {
+            color: red; /* Error message in red */
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Pokémon Catalog</h1>
+    </header>
+    <section id="pokemonData"></section>
+
     <script src="pokemon.js"></script>
 </body>
 </html>
